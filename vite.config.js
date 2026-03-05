@@ -4,5 +4,6 @@ import tailwindcjs from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/3d-game/',
   plugins: [react(), tailwindcjs()],
 })
