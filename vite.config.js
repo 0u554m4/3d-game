@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcjs from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/3d-game/',
-  plugins: [react(), tailwindcjs()],
+  plugins: [react(), tailwindcss()],
+  base: process.env.NODE_ENV === 'production' ? '/3d-game/' : '/',
 })
